@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SecretWord.Data;
+using SecretWord.Models;
 
 namespace SecretWord.Controllers
 {
@@ -17,6 +18,7 @@ namespace SecretWord.Controllers
         }
         public IActionResult Index()
         {
+            
             return View();
         }
 
