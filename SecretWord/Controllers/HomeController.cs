@@ -19,9 +19,10 @@ namespace SecretWord.Controllers
         }
         public IActionResult Index()
         {
+            var words = db.SecretWord                
+                .OrderBy(am => am.TimeStamp);
             
-            
-            return View();
+            return View(words);
         }
 
         public IActionResult About()
