@@ -25,6 +25,13 @@ namespace SecretWord.Controllers
             return View(words);
         }
 
+        public IActionResult AddWord()
+        {
+
+
+            return Redirect(@"/Home/Index");
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
