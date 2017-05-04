@@ -1,14 +1,14 @@
-﻿@model IEnumerable<SecretWord.Models.SecretWordModel>
+﻿@model SecretWordModel
 
 @{
     ViewData["Title"] = "Secret Word";
 }
 
-@foreach (var item in Model)
-{
-    <h2 class="secretWord center">@item.Word</h2>
 
-}
+
+    <h2 class="secretWord center">@Model.Word</h2>
+
+
 <h2 class="secretWord center"></h2>
 <div class="row">
 <div class="secretBoard col s12">
