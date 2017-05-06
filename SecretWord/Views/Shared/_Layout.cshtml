@@ -8,13 +8,25 @@
 
     <link href="~/lib/materialize/dist/css/materialize.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
     <nav>
-        <div class="nav-wrapper">
-            <a href="Home/Index" class="brand-logo center">Secret Word</a>
+        <div class="nav-wrapper indigo darken-2">
+            <ul id="slide-out" class="side-nav">
+                <li><a href="#!">Second Link</a></li>
+                <li><a href="#!">Second Link</a></li>
+                <div class="logoutbtn">
+                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+                    <button type="submit" class="waves-effect waves-light btn grey lighten-4 logoutbtn">Log out</button>
+                </form>
+                </div>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+
+            <a href="/Home/Index" class="brand-logo center">Secret Word</a>
             <p class="right userName">@User.Identity.Name</p>
         </div>
     </nav>
@@ -24,7 +36,7 @@
         </div>
     </main> 
         <footer>
-            <p>&copy; 2017 - SecretWord</p>
+            <p class="center">&copy; @DateTime.Now.Year - SecretWord</p>
         </footer>
     
 

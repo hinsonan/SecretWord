@@ -9,9 +9,27 @@ main {
 }
 
 .secretBoard{
-    border: 1px solid black;
+    
 }
 .userName{
     margin-top:-.15%;
     margin-right: 18px;
+}
+.logoutbtn{
+    color:black;
+    margin-left:15%;
+    margin-top: 225px;
+}
+.board {
+    
+    
+}
+.boardContainer {
+    
+}
+img{
+    width:20%;
+}
+.card-content{
+    color: black !important; 
 }

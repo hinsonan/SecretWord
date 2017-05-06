@@ -1,1 +1,5 @@
-﻿// Write your Javascript code.
+﻿$(document).ready(function () {
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    $('.parallax').parallax();
+});

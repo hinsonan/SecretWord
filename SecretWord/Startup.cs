@@ -46,6 +46,8 @@ namespace SecretWord
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            
+
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -62,9 +64,9 @@ namespace SecretWord
 
                 // Cookie settings
                 options.Cookies.ApplicationCookie.ExpireTimeSpan = TimeSpan.FromDays(150);
-                options.Cookies.ApplicationCookie.LoginPath = "/Account/LogIn";
-                options.Cookies.ApplicationCookie.LogoutPath = "/Account/LogOff";
-
+                options.Cookies.ApplicationCookie.LoginPath = "/Account/Login";
+                options.Cookies.ApplicationCookie.LogoutPath = "/Account/Login";
+                
                 // User settings
                 options.User.RequireUniqueEmail = true;
             });
