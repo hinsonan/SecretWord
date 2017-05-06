@@ -11,3 +11,7 @@ main {
 .secretBoard{
     border: 1px solid black;
 }
+.userName{
+    margin-top:-.15%;
+    margin-right: 18px;
+}

@@ -7,9 +7,11 @@ using SecretWord.Data;
 using SecretWord.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SecretWord.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext db;
@@ -28,12 +30,14 @@ namespace SecretWord.Controllers
             return View(word);
         }
 
-        public IActionResult AddWord()
+        public IActionResult AddWord(string SecretWord)
         {
             SecretWordModel newWord = new SecretWordModel();
             newWord.TimeStamp = DateTime.Now;
             newWord.Username = User.Identity.Name;
-            // newWord.Word = 
+            newWord.Word = SecretWord;
+            db.SecretWord.Add(newWord);
+            db.SaveChanges();
 
             return Redirect(@"/Home/Index");
         }
