@@ -1,1 +1,1 @@
-body{display:flex;min-height:100vh;flex-direction:column}main{flex:1 0 auto}.userName{margin-top:-.15%;margin-right:18px}.logoutbtn{color:#000;margin-left:15%;margin-top:225px}img{width:20%}.card-content{color:#000 !important}
+body{display:flex;min-height:100vh;flex-direction:column}main{flex:1 0 auto}.userName{margin-top:-.15%;margin-right:18px}.logoutbtn{color:#000;margin-left:15%;margin-top:225px}img{width:5%;border-radius:20px;margin-right:1%;vertical-align:auto}.card-content{color:#000 !important}.cardHeight{height:70px}p.word{font-size:30px;margin-top:-10px !important}

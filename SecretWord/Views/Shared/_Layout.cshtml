@@ -10,14 +10,16 @@
     <link href="~/css/site.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="icon" href="~/images/spy.jpg">
+
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
     <nav>
         <div class="nav-wrapper indigo darken-2">
             <ul id="slide-out" class="side-nav">
-                <li><a href="#!">Second Link</a></li>
-                <li><a href="#!">Second Link</a></li>
+                <li><a href="/Home/Index"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="/Home/Words"><i class="material-icons">dns</i>Words</a></li>
                 <div class="logoutbtn">
                 <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
                     <button type="submit" class="waves-effect waves-light btn grey lighten-4 logoutbtn">Log out</button>

@@ -41,7 +41,11 @@ namespace SecretWord.Controllers
 
             return Redirect(@"/Home/Index");
         }
-
+        public IActionResult Words()
+        {
+            var allWords = db.SecretWord.OrderByDescending(am => am.TimeStamp);
+            return View(allWords);
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

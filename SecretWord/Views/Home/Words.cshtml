@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SecretWord.Models.SecretWordModel>
+
+<h1 class="center">All Words</h1>
+
+@foreach (var word in Model)
+{
+    <div class="row">
+        <div class="col m6 offset-l3 offset-m3 offset-s3">
+            <div class="card indigo lighten-4 cardHeight">
+                <div class="card-content white-text">
+                    
+                    <p class="word left">@word.Word</p>
+                    <p class="right">@word.TimeStamp.Month/@word.TimeStamp.Day/@word.TimeStamp.Year</p>
+                      
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+
