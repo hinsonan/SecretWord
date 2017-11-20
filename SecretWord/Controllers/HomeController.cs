@@ -24,10 +24,25 @@ namespace SecretWord.Controllers
         }
         public IActionResult Index()
         {
-            var word = db.SecretWord                
+            if (!db.SecretWord.Any())
+            {
+                SecretWordModel defaultWord = new SecretWordModel();
+                defaultWord.TimeStamp = DateTime.Now;
+                defaultWord.Username = User.Identity.Name;
+                defaultWord.Word = "doctor";
+                db.SecretWord.Add(defaultWord);
+                db.SaveChanges();
+                return View(defaultWord);
+            }
+            else
+            {
+                var word = db.SecretWord
                 .OrderByDescending(am => am.TimeStamp).First();
+
+
+                return View(word);
+            }
             
-            return View(word);
         }
 
         public IActionResult AddWord(string SecretWord)
